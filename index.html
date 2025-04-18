@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet"href="styleport.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.jpg"class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Designer</p>
+            <h1>Hi,I'm <span> Gokiladevi</span><br> from Pollachi</h1>
+        </div>
+    </div>
+ </div> 
+  
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="pho.jpg">
+        </div>
+        <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+    <p>
+        Aspiring software engineer with a strong foundation in Computer Science and engineering and hands-on experience in developing and 
+deploying robust applications. .Proven ability to develop and implement software solutions through academic projects and internships.
+
+    </p>
+<div class="tab-titles">
+    <p class="tab-links active-link" onclick="opentab('Skills-Tech')">Skills-Tech</p>
+    <p class="tab-links"onclick="opentab('Skills-Soft')">Skills-Soft</p>
+    <p class="tab-links"onclick="opentab('Education')">Education</p>
+</div>
+<div class="tab-contents active-tab" id="Skills-Tech">
+    <ul>
+        <li><span>Web Development</span><br>Designing Web interfaces uing HTML5,CSS</li>
+        <li><span>Database Management</span><br>MySQL</li>
+        <li><span>Programming Language</span><br>C,Java,Python</li>
+    </ul>
+</div>
+<div class="tab-contents" id="Skills-Soft">
+    <ul>
+        <li><span>Communication</span><br>Excellent verbal and written communication.</li>
+        <li><span>Problem Solving</span><br>Analytical Thinking,Root cause analysis.</li>
+       
+    </ul>
+</div>
+<div class="tab-contents" id="Education">
+    <ul>
+        <li><span>BE/Technology in Computer Science and Engineering</span><br>Dr.Mahalingam College of Engineering and Technology,Pollachi.
+        <li><span>HSC</span><br>Sri Lathangi Vidhya Mandhir Higher Secondary School,Pollachi</li>
+        <li><span>SSLC</span><br>Sri Lathangi Vidhya Mandhir Higher Secondary School,Pollachi</li>
+    </ul>
+</div>
+    </div>
+ </div>
+
+ <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-sharp fa-regular fa-diagram-project"></i>
+                <h1>Projects</h1><br>
+                <p>SMART CANE:The obstacle detection feature is integrated into a smart cane designed to assist visually impaired individuals. 
+                    It beeps and conveys the information to the person who carries the cane. 
+                    Smart canes aim to improve navigation for individuals with visual impairments, helping them detect obstacles and navigate 
+                    unfamiliar environments safely.</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h1>Internships</h1>
+                <br>
+                <p>LEGEND CORP- Software Development Intern:
+                    Learned and applied HTML,CSS in real-world projects. Developed an Blood Donation website as part of a team..
+                </p>
+                    <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+ </div>
+
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="image\intern.jpg"style="width:1000px" height="450px">
+                <div class="layer">
+                    <h3>Event planning and coordination</h3>
+                    <p>Developed responsive web pages using HTML, CSS 
+                         Debugged and optimized front-end performance for the event planning and coordination. </p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image\cane.jpg">
+                <div class="layer">
+                    <h3>Projects</h3><br>
+                    <p>SMART CANE:The obstacle detection feature is integrated into a smart cane designed to assist visually impaired individuals. 
+                        It beeps and conveys the information to the person who carries the cane. 
+                        Smart canes aim to improve navigation for individuals with visual impairments, helping them detect obstacles and navigate 
+                        unfamiliar environments safely. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>
+</body>
+</html>
